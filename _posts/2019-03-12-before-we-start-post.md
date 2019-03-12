@@ -1,13 +1,12 @@
+---
 layout: post
 title:  "0：Before We Start"
 date:   2019-03-12
 excerpt: "Tools we need for shader learning."
 tag:
-
 - Shader
 - Unity
-
-------
+---
 
 # 需要做的准备
 
