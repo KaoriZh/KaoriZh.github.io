@@ -2,7 +2,7 @@
 title:              LiF
 bio:                'To cure sometimes, to relieve often, to comfort always.'
 description:        "NULL"
-reading_time:       true
+reading_time:       false
 words_per_minute:   200
 logo:               'assets/img/logo.png'
 background:         'assets/img/placeholder-big.jpg'
@@ -52,7 +52,7 @@ github-url:         KaoriZh
 #foursquare:        username
 #steam:              username
 #dribbble:          username
-#youtube:           username
+youtube:           LiF Zh
 #youtube-channel:   channel
 #soundcloud:        username
 #weibo:             username
