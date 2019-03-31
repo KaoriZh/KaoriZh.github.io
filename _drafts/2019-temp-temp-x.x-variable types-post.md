@@ -21,3 +21,8 @@ tag:
   - For others, use `half` if range and precision is fine; otherwise use `float`.
 
   On mobile platforms, the key is to ensure as much as possible stays in low precision in the fragment shader. On most mobile GPUs, applying swizzles to low precision (fixed/lowp) types is costly; converting between fixed/lowp and higher precision types is quite costly as well.
+
+
+
+  Cg/HLSL can also accept **uniform** keyword, but it is not necessary
+
