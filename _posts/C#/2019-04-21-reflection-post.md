@@ -91,16 +91,22 @@ public class Main {
 using System;
 using System.Reflection;
 
-public static class Utility<T> where T : class {
+public class Utility<T> where T : class {
     
     private T target;
+    private Type type;
     
-    private static void Instantiate() {
-        Type type = typeof(T);
+    private void Instantiate() {
+        type = typeof(T);
         ConstructorInfo constructor = type.GetConstructor(Type.EmptyTypes);
         target = (T)constructor.Invoke(null);
+    }
+    
+    private void InvokeMethod(string methodName) {
+        MethodInfo method = type.GetMethod(methodName);
+        method.Invoke(target，null);
     }
 }
 ```
 
-在上面的代码中我们实现了一个简单的静态泛型类，它可以在不知道对象类型的情况下，通过反射获取并调用这个类的无参构造函数。`GetConstructor`在Type中有很多重载方法，我们使用的是`GetConstructor(Type[])`重载，这个方法可以让我们获取到这个类的构造参数类型列表为`Type[]`的构造方法，最后通过接口提供的`Invoke`方法调用构造函数实例化一个泛型对象并将引用保存在`target`中。
+在上面的代码中我们实现了一个简单的泛型类，它可以在不知道对象类型的情况下，通过反射获取并调用这个类的无参构造函数。`GetConstructor`在Type中有很多重载方法，我们使用的是`GetConstructor(Type[])`重载，这个方法可以让我们获取到这个类的构造参数类型列表为`Type[]`的构造方法，最后通过`_Type`接口提供的`Invoke`方法调用构造函数实例化一个泛型对象并将引用保存在`target`中。`InvokeMethod`的实现也是类似，使用`GetMethod(string)`重载，通过方法名获取方法信息，然后通过`_MethodInfo`接口提供的`Invoke(Object, Object[])`方法调用实例的无参方法。
