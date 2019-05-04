@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "2.2：Variable Types"
+title:  "Extra：Variable Types"
 date:   2019-05-04
 excerpt: "Some may be confusing."
 tag:
 - Shader
 - Unity
+- Extra
 ---
 
 在我们使用Cg或者HLSL进行shader编写的过程中，常常涉及到一些变量类型的使用，其中数字类型有三种最基础的变量类型：`float`，`half`，`fixed`，由此延伸出的还有向量类型以及矩阵类型，如：`float3`，`half4x4`。虽然都是表示数字，但它们之间的差别还是应该清楚，而不是遇到数据就无脑地使用`float`。
