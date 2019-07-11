@@ -2,7 +2,7 @@
 layout: post
 title:  "Computer Organization"
 date:   2019-05-22
-excerpt: ""
+excerpt: "NULL"
 tag:
 - Computer Organization
 ---

@@ -2,7 +2,7 @@
 layout: post
 title:  "Computer Organization-the Representation of Number"
 date:   2019-05-23
-excerpt: ""
+excerpt: "NULL"
 tag:
 - Computer Organization
 ---
