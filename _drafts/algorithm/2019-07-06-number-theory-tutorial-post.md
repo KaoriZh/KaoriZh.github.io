@@ -88,18 +88,18 @@ $$
 
 LCM即Least Common Multiple，最小公倍数。
 
-根据唯一分解定理，对于给定的a，b：
-$$
-a=p_1^{a_1}\times p_2^{a_2} \times......\times p_k^{a_k}\\
-b=p_1^{b_1}\times p_2^{b_2} \times......\times p_k^{b_k}
-$$
-那么：
-$$
-gcd(a,b)=p_1^{min(a_1,b_1)}\times p_2^{min(a_2,b_2)}\times ......p_1^{min(a_k,b_k)}\\
-lcm(a,b)=p_1^{max(a_1,b_1)}\times p_2^{max(a_2,b_2)}\times ......p_1^{max(a_k,b_k)}\\
-因此，gcd(a,b)\times lcm(a,b)=a\times b
-$$
 
+$$
+\begin{align}
+&根据唯一分解定理，对于给定的a，b：\\
+&a=p_1^{a_1}\times p_2^{a_2} \times......\times p_k^{a_k}\\
+&b=p_1^{b_1}\times p_2^{b_2} \times......\times p_k^{b_k}\\
+&那么：\\
+&gcd(a,b)=p_1^{min(a_1,b_1)}\times p_2^{min(a_2,b_2)}\times ......p_1^{min(a_k,b_k)}\\
+&lcm(a,b)=p_1^{max(a_1,b_1)}\times p_2^{max(a_2,b_2)}\times ......p_1^{max(a_k,b_k)}\\
+&因此，gcd(a,b)\times lcm(a,b)=a\times b
+\end{align}
+$$
 ```c++
 LL lcm(LL a, LL b) {
     return a / gcd(a, b) * b;
@@ -199,22 +199,30 @@ LL exgcd(LL a, LL b, LL &x, LL &y) {
 
 这里只需要对贝祖等式稍作变换即可。假设EXGCD求出的方程ax+by=gcd（a，b）的一组解为x1和y1。在方程两边同时乘上一个数m，使得c=m*gcd（a，b），这里也就要求c是gcd（a，b）的倍数，即c%gcd（a，b）=0。这也是方程有解的条件。此时方程为：
 $$
-ax_1\times m+by_1\times m=gcd(a,b)\times m=c
+\begin{align}
+&ax_1\times m+by_1\times m=gcd(a,b)\times m=c
+\end{align}
 $$
 对于ax+by=gcd（a，b），其参数解为：
 $$
-x=x_1+{b\over gcd(a,b)}\times t,y=y_1-{a\over gcd(a,b)}\times t,t为参数\\
-这里选用{b\over gcd(a,b)}和{a\over gcd(a,b)}是为了保证结果均为整数
+\begin{align}
+&x=x_1+{b\over gcd(a,b)}\times t,y=y_1-{a\over gcd(a,b)}\times t,t为参数\\
+&这里选用{b\over gcd(a,b)}和{a\over gcd(a,b)}是为了保证结果均为整数
+\end{align}
 $$
 那么对比方程ax+by=c，可以得到其特解为：
 $$
-x_0=x_1\times m=x_1\times {c\over gcd(a,b)}\\
-y_0=y_1\times m=y_1\times {c\over gcd(a,b)}
+\begin{align}
+&x_0=x_1\times m=x_1\times {c\over gcd(a,b)}\\
+&y_0=y_1\times m=y_1\times {c\over gcd(a,b)}
+\end{align}
 $$
 那么其通解为：
 $$
-X=x_0+{b\over gcd(a,b)}\times t,Y=y_0-{a\over gcd(a,b)}\times t,t为参数\\
-这里选用{b\over gcd(a,b)}和{a\over gcd(a,b)}作为系数是为了确保得到均为整数解。
+\begin{align}
+&X=x_0+{b\over gcd(a,b)}\times t,Y=y_0-{a\over gcd(a,b)}\times t,t为参数\\
+&这里选用{b\over gcd(a,b)}和{a\over gcd(a,b)}作为系数是为了确保得到均为整数解。
+\end{align}
 $$
 对于任意一个确定的t，都有一组确定的解与之对应，只需要根据需要找出对应的解即可。
 
@@ -258,12 +266,16 @@ ax≡b（mod m）即ax%m=b%m，即求ax+my=b%m（取模其实就相当于减去�
 
 Inverse Element，逆元，推广了加法中的加法逆元和乘法中的倒数。直观地说，它是一个可以取消另一给定元素运算的元素。a关于模p的逆元存在的条件是gcd（a，p）=1。
 $$
-在模p意义下，设A的逆元为A^{-1}，那么有A\times A^{-1}\equiv 1(mod\space p)
+\begin{align}
+&在模p意义下，设A的逆元为A^{-1}，那么有A\times A^{-1}\equiv 1(mod\space p)
+\end{align}
 $$
 为什么需要逆元呢？
 $$
-在模意义下，{A\over B}\%p = {A\%p\over B\%p}\%p并不成立，\\
-那么设B在模p意义下的逆元表示为B^{-1}，根据逆元的定义，有{A\over B}=A\times B^{-1}(mod \space p)。
+\begin{align}
+&在模意义下，{A\over B}\%p = {A\%p\over B\%p}\%p并不成立，\\
+&那么设B在模p意义下的逆元表示为B^{-1}，根据逆元的定义，有{A\over B}=A\times B^{-1}(mod \space p)。
+\end{align}
 $$
 这里，我们把除法转化为乘法，就可以运用取模运算的性质：(a * b) % c = (a % c * b % c) % c，优化算法。
 
