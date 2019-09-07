@@ -2,7 +2,7 @@
 layout: post
 title:  "Extra：Cg Math Functions"
 date:   2019-05-04
-excerpt: "NULL"
+excerpt: ""
 tag:
 - Shader
 - Unity

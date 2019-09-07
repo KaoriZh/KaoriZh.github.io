@@ -2,7 +2,7 @@
 layout: post
 title:  "C# Fragment : Interface"
 date:   2019-04-19
-excerpt: "NULL"
+excerpt: ""
 tag:
 - C#
 - Interface

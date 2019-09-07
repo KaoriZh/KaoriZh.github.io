@@ -2,7 +2,7 @@
 layout: post
 title:  "C# Fragment：Attribute"
 date:   2019-04-21
-excerpt: "NULL"
+excerpt: ""
 tag:
 - C#
 - Attribute

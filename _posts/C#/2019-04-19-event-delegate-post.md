@@ -2,7 +2,7 @@
 layout: post
 title:  "C# Fragment : Event and Delegate"
 date:   2019-04-19
-excerpt: "NULL"
+excerpt: ""
 tag:
 - C#
 - Event

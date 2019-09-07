@@ -2,7 +2,7 @@
 layout: post
 title:  "Computer Organization-Data Validation"
 date:   2019-05-23
-excerpt: "NULL"
+excerpt: ""
 tag:
 - Computer Organization
 ---

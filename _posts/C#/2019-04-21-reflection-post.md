@@ -2,7 +2,7 @@
 layout: post
 title:  "C# Fragment：Reflection"
 date:   2019-04-21
-excerpt: "NULL"
+excerpt: ""
 tag:
 - C#
 - Reflection

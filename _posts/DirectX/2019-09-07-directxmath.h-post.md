@@ -84,7 +84,7 @@ XMVECTOR XM_CALLCONV XMVectorSetX(FXMVECTOR V, float x);
 
 ```c++
 // 在32位的Windows系统上，XM_CALLCONV转化为__fastcall调用约定
-// 把前三个XMVECTOR类型直接传入寄存器时，将会出现如下等类型定义
+// 把前三个XMVECTOR类型直接传入寄存器时，将会出现如下类型定义
 typedef const XMVECTOR FXMVECTOR;
 typedef const XMVECTOR& GXMVECTOR;
 typedef const XMVECTOR& HXMVECTOR;

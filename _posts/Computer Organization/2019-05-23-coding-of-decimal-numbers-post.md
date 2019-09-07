@@ -2,7 +2,7 @@
 layout: post
 title:  "Computer Organization-Coding of Decimal Numbers"
 date:   2019-05-23
-excerpt: "NULL"
+excerpt: ""
 tag:
 - Computer Organization
 ---

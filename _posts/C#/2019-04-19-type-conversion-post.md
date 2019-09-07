@@ -2,7 +2,7 @@
 layout: post
 title:  "C# Fragment : Type Conversion"
 date:   2019-04-19
-excerpt: "NULL"
+excerpt: ""
 tag:
 - C#
 - Type Conversion
