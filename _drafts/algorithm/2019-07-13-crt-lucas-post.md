@@ -289,7 +289,10 @@ ll exgcd(ll a, ll b, ll &x, ll &y) {
 }
 
 ll inv(ll a, ll p) {
-    return qpow(a, p - 2, p);
+    if(!a) return 0;
+    int x, y;
+    exgcd(a, p, x, y);
+    return (x % p + p) % p;
 }
 
 ll C(ll n, ll m, ll p, ll pk) {

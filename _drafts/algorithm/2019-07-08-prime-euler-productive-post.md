@@ -205,7 +205,6 @@ $$
 ```c++
 // 计算单个欧拉函数值
 int euler(int n) {
-    if(n == 1) return 1;
     int ans = n;
     // 追求更高效率还可以结合素数表
     int m = sqrt(n + .5);
@@ -215,7 +214,8 @@ int euler(int n) {
             while(n % i == 0) n/= i;
         }
     }
-    return ans - ans / n;
+    if(n > 1) ans -= ans / n;
+    return ans;
 }
 ```
 
