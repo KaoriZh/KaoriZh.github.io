@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "DirectX：DirectXMath.h"
+title:  "DirectX：Vector"
 date:   2019-09-07
 excerpt: ""
 tag:
@@ -9,7 +9,7 @@ tag:
 
 Tag DirectX下的博客主要用于记录DirectX的学习过程，主要参考《DirectX 12 3D 游戏实战开发》。
 
-# Math in DirectX
+# Vector in DirectX
 
 Shader的编写离不开数学运算，尤其是向量矩阵类型的运算，DirectX为我们准备了一个完备的数学库`DirectXMath.h`，里面封装了常用的向量矩阵类型，并且重载了许多方法，如点积、叉积、矩阵乘法等。DirectXMath是Windows SDK的一部分，是为D3D打造的3D数学库，采用SIMD指令集加速向量运算，如：单条SIMD加法指令可以直接计算4D向量的加法结果。
 
