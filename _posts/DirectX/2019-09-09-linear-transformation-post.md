@@ -71,7 +71,7 @@ c+(1-c)x^2&(1-c)xy+sz&(1-c)xz-sy\\
 (1-c)xy-sz&c+(1-c)y^2&(1-c)yz+sx\\
 (1-c)xz+sy&(1-c)yz-sx&c+(1-c)z^2
 \end{bmatrix}\\
-&其中，c=\cos\theta,s=\sin\theta
+&其中，c=\cos\theta,s=\sin\theta,x=\vec{n}_x,y=\vec{n}_y,z=\vec{n}_z
 \end{aligned}
 $$
 旋转矩阵都是正交矩阵，即矩阵中的任两个行向量都互相正交，正交矩阵的转置即逆矩阵。由此我们可以高效得出旋转变换的逆变换对应的矩阵。
