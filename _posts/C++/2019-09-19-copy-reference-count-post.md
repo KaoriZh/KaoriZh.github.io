@@ -106,7 +106,10 @@ class LiF {
 public:
 	LiF(const int& _lif = 0): lif(new int(_lif)), referenceCount(new unsigned(1)) {}
 	
-	LiF(const LiF& l) : lif(new int(*l.lif)) {}
+	LiF(const LiF& l) : 
+		lif(l.lif), referenceCount(l.referenceCount) {
+		++ *referenceCount;
+	}
 	
 	LiF& operator= (const LiF& l) {
 		++ *l.referenceCount;
