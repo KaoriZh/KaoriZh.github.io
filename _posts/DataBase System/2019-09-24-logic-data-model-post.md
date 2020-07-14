@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Logic Data Model"
+title:  "Database System： Logic Data Model"
 date:   2019-09-24
 excerpt: ""
 tag:
-- DataBase System
+- Database System
 ---
 
 本篇内容来自《数据库系统概论（第五版）》（王珊 萨师煊），主要是整理数据库的基本概念，供自己复习查阅。
