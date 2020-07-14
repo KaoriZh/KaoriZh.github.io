@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Relational Data Structure"
+title:  "Database System： Relational Data Structure"
 date:   2019-09-25
 excerpt: ""
 tag:
-- DataBase System
+- Database System
 ---
 
 本篇内容来自《数据库系统概论（第五版）》（王珊 萨师煊），主要是整理数据库的基本概念，供自己复习查阅。
@@ -168,6 +168,8 @@ $$
 专门的关系运算包括选择、投影、连接、除运算等。
 
 #### 记号
+
+为了叙述方便，首先引入几个记号。
 
 ##### 分量
 
